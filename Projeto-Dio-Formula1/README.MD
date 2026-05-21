@@ -1,101 +1,150 @@
 <div align="center">
-  <img src="./.github/1.png" alt="Logo" height="200">
-  <h1 align="center"><strong>Formula 1 REST API</strong></h1>
-  <p align="center">
-    API REST com dados de times e pilotos da Fórmula 1,<br>desenvolvida durante o bootcamp da <b>DIO (Digital Innovation One)</b>.
-  </p>
+
+
+# 🏎️ Formula 1 REST API
+
+API REST desenvolvida com Node.js e TypeScript para listar dados de times e pilotos da Fórmula 1.
+
+Projeto criado durante o bootcamp da **DIO (Digital Innovation One)**.
+
 </div>
 
-<br />
+---
 
-## Sobre o Projeto
+# ✨ Funcionalidades
 
-Este projeto foi desenvolvido como parte do bootcamp da **DIO (Digital Innovation One)** e tem como objetivo praticar a criação de APIs REST com **Node.js** e **TypeScript**, utilizando o framework **Fastify**.
-
-A API fornece dados sobre times e pilotos da Fórmula 1, permitindo listar equipes, consultar pilotos e buscar um piloto específico por ID.
+- 🏁 Listar todos os times
+- 👨‍✈️ Listar todos os pilotos
+- 🔎 Buscar piloto por ID
 
 ---
 
-## Tecnologias Utilizadas
+# 🚀 Tecnologias Utilizadas
 
-- [Node.js](https://nodejs.org/) — Ambiente de execução JavaScript
-- [TypeScript](https://www.typescriptlang.org/) — Superset tipado do JavaScript
-- [Fastify](https://fastify.dev/) — Framework web rápido e eficiente para Node.js
-- [@fastify/cors](https://github.com/fastify/fastify-cors) — Plugin de CORS para o Fastify
-- [tsx](https://www.npmjs.com/package/tsx) — Execução de TypeScript diretamente no Node.js
-- [tsup](https://www.npmjs.com/package/tsup) — Bundler para TypeScript
+- ⚡ Node.js
+- 🔷 TypeScript
+- 🚄 Fastify
+- 🌐 @fastify/cors
+- 🛠️ TSX
+- 📦 TSUP
 
 ---
 
-## Endpoints da API
+# 📂 Estrutura do Projeto
 
-O servidor sobe na porta **3333** por padrão.
+```txt
+src/
+├── routes/
+├── controllers/
+├── services/
+├── repositories/
+├── models/
+└── utils/
+```
+
+---
+
+# 🌐 Endpoints da API
+
+O servidor roda na porta **3333**.
 
 | Método | Rota | Descrição |
-|--------|------|-----------|
-| GET | `/teams` | Retorna todos os times de F1 |
-| GET | `/drivers` | Retorna todos os pilotos |
-| GET | `/drivers/:id` | Retorna um piloto pelo ID |
+|---|---|---|
+| GET | `/teams` | Lista todos os times |
+| GET | `/drivers` | Lista todos os pilotos |
+| GET | `/drivers/:id` | Busca piloto por ID |
 
-### Exemplos de resposta
+---
 
-**GET /teams**
+# 📄 Exemplos de Resposta
+
+## 🏁 GET /teams
+
 ```json
 {
   "teams": [
-    { "id": 1, "name": "McLaren", "base": "Woking, United Kingdom" },
-    { "id": 2, "name": "Mercedes", "base": "Brackley, United Kingdom" }
+    {
+      "id": 1,
+      "name": "McLaren",
+      "base": "Woking, United Kingdom"
+    }
   ]
 }
 ```
 
-**GET /drivers/1**
+---
+
+## 👨‍✈️ GET /drivers/1
+
 ```json
 {
-  "driver": { "id": 1, "name": "Max Verstappen", "team": "Red Bull Racing" }
+  "driver": {
+    "id": 1,
+    "name": "Max Verstappen",
+    "team": "Red Bull Racing"
+  }
 }
 ```
 
 ---
 
-## Como Executar
+# ⚙️ Instalação
 
-### Pré-requisitos
-
-- [Node.js v20+](https://nodejs.org/)
-- [NPM v10+](https://nodejs.org/)
-
-### Instalação
+## Clone o repositório
 
 ```bash
-# Clone o repositório
 git clone https://github.com/seu-usuario/node-formula-1
+```
 
-# Acesse a pasta do projeto
+## Entre na pasta
+
+```bash
 cd node-formula-1
+```
 
-# Instale as dependências
+## Instale as dependências
+
+```bash
 npm install
 ```
 
-### Scripts disponíveis
+---
+
+# ▶️ Executando o Projeto
+
+## Desenvolvimento
 
 ```bash
-# Executa em modo de desenvolvimento
 npm run start:dev
+```
 
-# Executa com hot reload (reinicia ao salvar arquivos)
+## Modo Watch
+
+```bash
 npm run start:watch
+```
 
-# Compila o projeto para JavaScript
+## Gerar Build
+
+```bash
 npm run dist
+```
 
-# Compila e executa a versão de produção
+## Executar Build
+
+```bash
 npm run start:dist
 ```
 
 ---
 
-## Bootcamp DIO
+# 💻 Projeto feito para estudos
 
-Este projeto faz parte do currículo do bootcamp da **[DIO — Digital Innovation One](https://www.dio.me/)**, plataforma de educação em tecnologia que conecta desenvolvedores a oportunidades no mercado.
+Projeto criado durante o bootcamp da **DIO (Digital Innovation One)** para praticar:
+
+- APIs REST
+- Node.js
+- TypeScript
+- Fastify
+- Organização de rotas
+- Estrutura em camadas
